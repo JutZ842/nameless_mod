@@ -1,6 +1,7 @@
 package teamwu.underworld.init;
 
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,14 +13,21 @@ import teamwu.underworld.UnderWorldMod;
 public class UWBlockItems {
     private static final DeferredRegister<Item> BLOCKITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, UnderWorldMod.MODID);
 
-    public static final RegistryObject<Item> TESTBLOCK = registerBlockItem(UWBlocks.TESTBLOCK);
-
     public static void register(IEventBus eventBus) {
         BLOCKITEMS.register(eventBus);
     }
 
-    private static RegistryObject<Item> registerBlockItem(RegistryObject<Block> block) {
-        return BLOCKITEMS.register(block.getId().getPath(), () ->
-                new BlockItem(block.get(), new Item.Properties()));
+    public static void registerBlockItems() {
+        //registerBlockItems(...);
+    }
+
+    @SafeVarargs
+    private static void registerBlockItems(RegistryObject<Block>... blocks) {
+        for (var block : blocks) {
+            BLOCKITEMS.register(block.getId().getPath(), () ->
+                    new BlockItem(block.get(),
+                            new Item.Properties()
+                                    .tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+        }
     }
 }

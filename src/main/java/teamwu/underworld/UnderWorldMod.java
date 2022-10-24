@@ -11,6 +11,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import teamwu.underworld.init.UWBlockItems;
 import teamwu.underworld.init.UWBlocks;
+import teamwu.underworld.init.UWItems;
 
 @Mod(UnderWorldMod.MODID)
 public class UnderWorldMod {
@@ -23,8 +24,11 @@ public class UnderWorldMod {
         EVENT_BUS.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
 
+        UWBlockItems.registerBlockItems();
+
         UWBlocks.register(EVENT_BUS);
         UWBlockItems.register(EVENT_BUS);
+        UWItems.register(EVENT_BUS);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

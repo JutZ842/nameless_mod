@@ -1,15 +1,15 @@
 package teamwu.underworld.init;
 
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import teamwu.underworld.UnderWorldMod;
 
-public class UWBlocks {
-    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, UnderWorldMod.MODID);
+public class UWItems {
+    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, UnderWorldMod.MODID);
 
     public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
+        ITEMS.register(eventBus);
     }
 }
