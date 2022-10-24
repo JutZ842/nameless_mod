@@ -15,6 +15,7 @@ public class DataGenerators {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
+        generator.addProvider(new UWLootTableProvider(generator));
 
     }
 }
