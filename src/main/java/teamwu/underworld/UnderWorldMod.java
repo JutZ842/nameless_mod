@@ -15,7 +15,7 @@ import teamwu.underworld.init.UWBlocks;
 public class UnderWorldMod {
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final String MODID = "underworld";
+    public static final String MODID = "assets/underworld";
 
     public UnderWorldMod() {
         IEventBus EVENT_BUS = FMLJavaModLoadingContext.get().getModEventBus();
