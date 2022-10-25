@@ -16,6 +16,5 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         generator.addProvider(new UWLootTableProvider(generator));
-
     }
 }
