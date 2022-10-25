@@ -23,12 +23,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class UWLootTableProvider extends LootTableProvider {
-    private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> loot_tables =
-            ImmutableList.of(
-            Pair.of(UWBlockLootTables::new, LootContextParamSets.BLOCK),
-            Pair.of(UWChestLootTables::new, LootContextParamSets.CHEST),
-            Pair.of(UWEntityLootTables::new, LootContextParamSets.ENTITY),
-            Pair.of(UWGiftLootTables::new, LootContextParamSets.GIFT));
+
 
     public UWLootTableProvider(DataGenerator pGenerator) {
         super(pGenerator);
@@ -36,7 +31,12 @@ public class UWLootTableProvider extends LootTableProvider {
 
     @Override
     protected @NotNull List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables() {
-        return loot_tables;
+        return ImmutableList.of(
+                Pair.of(UWBlockLootTables::new, LootContextParamSets.BLOCK),
+                Pair.of(UWChestLootTables::new, LootContextParamSets.CHEST)
+                //Pair.of(UWEntityLootTables::new, LootContextParamSets.ENTITY),
+                //Pair.of(UWGiftLootTables::new, LootContextParamSets.GIFT)
+        );
     }
 
     @Override
