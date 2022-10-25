@@ -13,7 +13,7 @@ public class UWBlockItems {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-                bi( UWBlocks.TESTBLOCK.get() ));
+                );
     }
 
     private static Item bi(Block block) {
