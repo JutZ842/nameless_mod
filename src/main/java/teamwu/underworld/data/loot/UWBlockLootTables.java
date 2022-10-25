@@ -9,7 +9,6 @@ import teamwu.underworld.init.UWBlocks;
 public class UWBlockLootTables extends BlockLoot {
     @Override
     protected void addTables() {
-        dropSelf(UWBlocks.TESTBLOCK.get());
     }
 
     @Override
