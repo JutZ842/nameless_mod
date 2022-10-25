@@ -33,9 +33,9 @@ public class UWLootTableProvider extends LootTableProvider {
     protected @NotNull List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables() {
         return ImmutableList.of(
                 Pair.of(UWBlockLootTables::new, LootContextParamSets.BLOCK),
-                Pair.of(UWChestLootTables::new, LootContextParamSets.CHEST),
-                Pair.of(UWEntityLootTables::new, LootContextParamSets.ENTITY),
-                Pair.of(UWGiftLootTables::new, LootContextParamSets.GIFT)
+                Pair.of(UWChestLootTables::new, LootContextParamSets.CHEST)
+                //Pair.of(UWEntityLootTables::new, LootContextParamSets.ENTITY),
+                //Pair.of(UWGiftLootTables::new, LootContextParamSets.GIFT)
         );
     }
 

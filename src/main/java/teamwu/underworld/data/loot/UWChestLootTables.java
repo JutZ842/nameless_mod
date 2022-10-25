@@ -11,6 +11,6 @@ public class UWChestLootTables extends ChestLoot {
 
     @Override
     public void accept(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> resourceLocationBuilderBiConsumer) {
-        super.accept(resourceLocationBuilderBiConsumer);
+
     }
 }
