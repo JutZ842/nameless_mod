@@ -1,6 +1,5 @@
 package teamwu.underworld.init;
 
-import net.minecraft.core.Registry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -17,6 +16,7 @@ public class UWBlockItems {
         IForgeRegistry<Item> r = event.getRegistry();
         r.register(blockItem(UWBlocks.HORNFELS_STONE.get()));
         r.register(blockItem(UWBlocks.GNEISS_STONE.get()));
+        r.register(blockItem(UWBlocks.GREENSCHIST_STONE.get()));
     }
 
     private static Item blockItem(Block block) {

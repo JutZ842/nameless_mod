@@ -18,6 +18,7 @@ public class UWItemModelGenerator extends ItemModelProvider {
     protected void registerModels() {
         blockItem(UWBlocks.GNEISS_STONE.get().asItem());
         blockItem(UWBlocks.HORNFELS_STONE.get().asItem());
+        blockItem(UWBlocks.GREENSCHIST_STONE.get().asItem());
     }
     private ItemModelBuilder blockItem(Item item){
         return withExistingParent(item.getRegistryName().getPath(), new ResourceLocation("block/" + item.getRegistryName().getPath()));

@@ -20,8 +20,13 @@ public class UWBlocks {
     public static final RegistryObject<Block> GNEISS_STONE = BLOCKS.register("stone_gneiss", () ->
             new Block(
                     BlockBehaviour.Properties.of(Material.STONE)
-                        .explosionResistance(5.5f)
-                        .strength(1.25f)));
+                            .explosionResistance(5.5f)
+                            .strength(1.25f)));
+    public static final RegistryObject<Block> GREENSCHIST_STONE = BLOCKS.register("stone_greenschist", () ->
+            new Block(
+                    BlockBehaviour.Properties.of(Material.STONE)
+                            .explosionResistance(5.5f)
+                            .strength(1.25f)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

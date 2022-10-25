@@ -15,5 +15,6 @@ public class UWBlockStateGenerator extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(UWBlocks.HORNFELS_STONE.get());
         simpleBlock(UWBlocks.GNEISS_STONE.get());
+        simpleBlock(UWBlocks.GREENSCHIST_STONE.get());
     }
 }
