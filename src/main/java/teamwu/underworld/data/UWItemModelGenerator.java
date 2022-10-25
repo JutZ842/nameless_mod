@@ -16,15 +16,19 @@ public class UWItemModelGenerator extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        blockItem(UWBlocks.GNEISS_STONE.get().asItem());
-        blockItem(UWBlocks.HORNFELS_STONE.get().asItem());
-        blockItem(UWBlocks.GREENSCHIST_STONE.get().asItem());
+        //block below this line
+        blockItemModel(UWBlocks.GNEISS_STONE.get().asItem());
+        blockItemModel(UWBlocks.HORNFELS_STONE.get().asItem());
+        blockItemModel(UWBlocks.GREENSCHIST_STONE.get().asItem());
+
+        //items below this line
+
     }
-    private ItemModelBuilder blockItem(Item item){
+    private ItemModelBuilder blockItemModel(Item item){
         return withExistingParent(item.getRegistryName().getPath(), new ResourceLocation(UnderWorldMod.MODID, "block/" + item.getRegistryName().getPath()));
     }
 
-    private ItemModelBuilder handheldItem(Item item){
+    private ItemModelBuilder handheldItemModel(Item item){
         return withExistingParent(item.getRegistryName().getPath(), new ResourceLocation("item/handheld")).texture("layer0", new ResourceLocation(UnderWorldMod.MODID, "item/" + item.getRegistryName().getPath()));
     }
 }
