@@ -21,7 +21,7 @@ public class UWItemModelGenerator extends ItemModelProvider {
         blockItem(UWBlocks.GREENSCHIST_STONE.get().asItem());
     }
     private ItemModelBuilder blockItem(Item item){
-        return withExistingParent(item.getRegistryName().getPath(), new ResourceLocation("block/" + item.getRegistryName().getPath()));
+        return withExistingParent(item.getRegistryName().getPath(), new ResourceLocation(UnderWorldMod.MODID, "block/" + item.getRegistryName().getPath()));
     }
 
     private ItemModelBuilder handheldItem(Item item){
