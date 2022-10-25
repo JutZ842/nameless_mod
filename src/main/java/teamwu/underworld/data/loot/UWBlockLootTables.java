@@ -9,6 +9,8 @@ import teamwu.underworld.init.UWBlocks;
 public class UWBlockLootTables extends BlockLoot {
     @Override
     protected void addTables() {
+        dropSelf(UWBlocks.GNEISS_STONE.get());
+        dropSelf(UWBlocks.HORNFELS_STONE.get());
     }
 
     @Override
