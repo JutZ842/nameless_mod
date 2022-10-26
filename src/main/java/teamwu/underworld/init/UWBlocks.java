@@ -27,6 +27,16 @@ public class UWBlocks {
                     BlockBehaviour.Properties.of(Material.STONE)
                             .explosionResistance(5.5f)
                             .strength(1.25f)));
+    public static final RegistryObject<Block> HORNFELS_STONE_WHITE = BLOCKS.register("stone_white_hornfels", () ->
+            new Block(
+                    BlockBehaviour.Properties.of(Material.STONE)
+                            .explosionResistance(10.0f)
+                            .strength(2.0f)));
+    public static final RegistryObject<Block> HORNFELS_STONE_GRAY = BLOCKS.register("stone_gray_hornfels", () ->
+            new Block(
+                    BlockBehaviour.Properties.of(Material.STONE)
+                            .explosionResistance(10.0f)
+                            .strength(2.0f)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

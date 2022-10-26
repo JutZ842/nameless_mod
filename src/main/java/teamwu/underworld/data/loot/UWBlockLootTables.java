@@ -12,6 +12,8 @@ public class UWBlockLootTables extends BlockLoot {
         dropSelf(UWBlocks.GNEISS_STONE.get());
         dropSelf(UWBlocks.HORNFELS_STONE.get());
         dropSelf(UWBlocks.GREENSCHIST_STONE.get());
+        dropSelf(UWBlocks.HORNFELS_STONE_WHITE.get());
+        dropSelf(UWBlocks.HORNFELS_STONE_GRAY.get());
     }
 
     @Override
