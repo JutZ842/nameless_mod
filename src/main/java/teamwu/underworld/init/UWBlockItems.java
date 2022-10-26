@@ -19,7 +19,10 @@ public class UWBlockItems {
         r.register(blockItem(UWBlocks.GREENSCHIST_STONE.get()));
     }
 
+    private static final Item.Properties PROPERTIES = new Item.Properties()
+            .tab(UWItems.TAB);
+
     private static Item blockItem(Block block) {
-        return new BlockItem(block, new Item.Properties()).setRegistryName(block.getRegistryName());
+        return new BlockItem(block, PROPERTIES).setRegistryName(block.getRegistryName());
     }
 }
