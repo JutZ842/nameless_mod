@@ -22,6 +22,7 @@ public class UWItemModelGenerator extends ItemModelProvider {
         blockItemModel(UWBlocks.GREENSCHIST_STONE.get().asItem());
         blockItemModel(UWBlocks.HORNFELS_STONE_WHITE.get().asItem());
         blockItemModel(UWBlocks.HORNFELS_STONE_GRAY.get().asItem());
+        blockItemModel(UWBlocks.HORNFELS_COBBLE.get().asItem());
 
         //items below this line
 

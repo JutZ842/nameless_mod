@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "underworld:stone_hornfels",
+    "underworld:stone_gneiss",
+    "underworld:stone_greenschist",
+    "underworld:stone_white_hornfels",
+    "underworld:stone_gray_hornfels",
+    "underworld:cobble_hornfels"
+  ]
+}

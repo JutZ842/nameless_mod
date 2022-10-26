@@ -18,5 +18,6 @@ public class UWBlockStateGenerator extends BlockStateProvider {
         simpleBlock(UWBlocks.GREENSCHIST_STONE.get());
         simpleBlock(UWBlocks.HORNFELS_STONE_WHITE.get());
         simpleBlock(UWBlocks.HORNFELS_STONE_GRAY.get());
+        simpleBlock(UWBlocks.HORNFELS_COBBLE.get());
     }
 }

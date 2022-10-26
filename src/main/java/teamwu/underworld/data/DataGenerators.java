@@ -23,6 +23,7 @@ public class DataGenerators {
             generator.addProvider(new UWRecipeGenerator(generator));
 
             BlockTagsProvider blockTagsProvider = new UWBlockTagGenerator(generator, existingFileHelper);
+            generator.addProvider(blockTagsProvider);
             generator.addProvider(new UWItemTagGenerator(generator, blockTagsProvider, existingFileHelper));
         }
         if(event.includeClient()){

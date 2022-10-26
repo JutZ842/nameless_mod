@@ -10,10 +10,11 @@ public class UWBlockLootTables extends BlockLoot {
     @Override
     protected void addTables() {
         dropSelf(UWBlocks.GNEISS_STONE.get());
-        dropSelf(UWBlocks.HORNFELS_STONE.get());
+        add(UWBlocks.HORNFELS_STONE.get(), block -> createSingleItemTableWithSilkTouch(block, UWBlocks.HORNFELS_COBBLE.get()));
         dropSelf(UWBlocks.GREENSCHIST_STONE.get());
         dropSelf(UWBlocks.HORNFELS_STONE_WHITE.get());
         dropSelf(UWBlocks.HORNFELS_STONE_GRAY.get());
+        dropSelf(UWBlocks.HORNFELS_COBBLE.get());
     }
 
     @Override

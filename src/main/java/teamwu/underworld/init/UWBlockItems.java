@@ -19,6 +19,7 @@ public class UWBlockItems {
         r.register(blockItem(UWBlocks.GREENSCHIST_STONE.get()));
         r.register(blockItem(UWBlocks.HORNFELS_STONE_WHITE.get()));
         r.register(blockItem(UWBlocks.HORNFELS_STONE_GRAY.get()));
+        r.register(blockItem(UWBlocks.HORNFELS_COBBLE.get()));
     }
 
     private static final Item.Properties PROPERTIES = new Item.Properties()
