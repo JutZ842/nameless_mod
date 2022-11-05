@@ -10,6 +10,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import teamwu.underworld.init.UWBlocks;
+import teamwu.underworld.init.UWDimensions;
 import teamwu.underworld.init.UWItems;
 
 @Mod(UnderWorldMod.MODID)
@@ -25,6 +26,7 @@ public class UnderWorldMod {
 
         UWBlocks.register(EVENT_BUS);
         UWItems.register(EVENT_BUS);
+        UWDimensions.register();
     }
 
     private void setup(final FMLCommonSetupEvent event) {

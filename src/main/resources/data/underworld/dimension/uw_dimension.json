@@ -1,0 +1,12 @@
+{
+  "type": "underworld:uw_dimension_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": 85692873,
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "minecraft:plains"
+    }
+  }
+}
