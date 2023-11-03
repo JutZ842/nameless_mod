@@ -8,10 +8,15 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamwu.underworld.UnderWorldMod;
-import teamwu.underworld.entity.EagleEntity;
+import teamwu.underworld.entities.EagleEntity;
+import teamwu.underworld.entities.GragronEntity;
 
-public class EntityTypes {
+public class UWEntityInit {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, UnderWorldMod.MODID);
+
+    public static final RegistryObject<EntityType<GragronEntity>> GRAGRON = ENTITIES.register("gragron",
+            () -> EntityType.Builder.of(GragronEntity::new, MobCategory.CREATURE)
+                    .build(new ResourceLocation(UnderWorldMod.MODID, "gragron").toString()));
 
     public static final RegistryObject<EntityType<EagleEntity>> EAGLE = ENTITIES.register("eagle",
             () -> EntityType.Builder.of(EagleEntity::new, MobCategory.MONSTER)

@@ -1,4 +1,4 @@
-package teamwu.underworld.entity;
+package teamwu.underworld.entities;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -15,12 +15,10 @@ import net.minecraft.world.entity.animal.FlyingAnimal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
-import software.bernie.geckolib3.core.builder.ILoopType;
 import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
@@ -37,11 +35,12 @@ public class EagleEntity extends Animal implements IAnimatable, FlyingAnimal {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event){
         if(event.isMoving() && !isFlying()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.eagle.walk", true));
+            //temp solution have to look in animations!
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.eagle.walk"));
         } else if(event.isMoving() && isFlying()){
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.eagle.fly", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.eagle.fly"));
         } else {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("aimation.eagle.idle", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("aimation.eagle.idle"));
         }
         return PlayState.CONTINUE;
     }

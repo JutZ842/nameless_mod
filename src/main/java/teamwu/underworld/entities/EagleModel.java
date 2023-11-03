@@ -1,4 +1,4 @@
-package teamwu.underworld.entity;
+package teamwu.underworld.entities;
 
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;

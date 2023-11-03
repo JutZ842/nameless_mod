@@ -11,12 +11,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
-import teamwu.underworld.entity.EagleEntity;
-import teamwu.underworld.entity.EagleRenderer;
-import teamwu.underworld.init.EntityTypes;
+import teamwu.underworld.client.GragronRenderer;
+import teamwu.underworld.client.models.GragronModel;
+import teamwu.underworld.entities.GragronEntity;
+import teamwu.underworld.init.UWEntityInit;
 import teamwu.underworld.init.UWBlocks;
 import teamwu.underworld.init.UWDimensions;
 import teamwu.underworld.init.UWItems;
@@ -35,11 +35,12 @@ public class UnderWorldMod {
         UWBlocks.register(EVENT_BUS);
         UWItems.register(EVENT_BUS);
         UWDimensions.register();
-        EntityTypes.register(EVENT_BUS);
+        UWEntityInit.register(EVENT_BUS);
 
         GeckoLib.initialize();
 
-        EntityRenderers.register(EntityTypes.EAGLE.get(), EagleRenderer::new);
+        //EntityRenderers.register(EntityInit.EAGLE.get(), EagleRenderer::new);
+        EntityRenderers.register(UWEntityInit.GRAGRON.get(), GragronRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -49,9 +50,17 @@ public class UnderWorldMod {
 
     @Mod.EventBusSubscriber(modid = UnderWorldMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class Events{
-        @SubscribeEvent
+        /*@SubscribeEvent
         public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-            event.put(EntityTypes.EAGLE.get(), EagleEntity.createAttributes().build());
+            event.put(EntityInit.EAGLE.get(), EagleEntity.createAttributes().build());
+        }*/
+        @SubscribeEvent
+        public static void entityAttributes(EntityAttributeCreationEvent event){
+            event.put(UWEntityInit.GRAGRON.get(), GragronEntity.attributes());
+        }
+        @SubscribeEvent
+        public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event){
+            event.registerLayerDefinition(GragronModel.LAYER_LOCATION, GragronModel::createBodyLayer);
         }
     }
 
