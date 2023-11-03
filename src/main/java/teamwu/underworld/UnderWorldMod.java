@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 import teamwu.underworld.client.GragronRenderer;
 import teamwu.underworld.client.models.GragronModel;
-import teamwu.underworld.entities.GragronEntity;
+import teamwu.underworld.entities.Gragron;
 import teamwu.underworld.init.UWEntityInit;
 import teamwu.underworld.init.UWBlocks;
 import teamwu.underworld.init.UWDimensions;
@@ -56,7 +56,7 @@ public class UnderWorldMod {
         }*/
         @SubscribeEvent
         public static void entityAttributes(EntityAttributeCreationEvent event){
-            event.put(UWEntityInit.GRAGRON.get(), GragronEntity.attributes());
+            event.put(UWEntityInit.GRAGRON.get(), Gragron.attributes());
         }
         @SubscribeEvent
         public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event){

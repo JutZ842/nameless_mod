@@ -16,9 +16,9 @@ import net.minecraftforge.common.ForgeMod;
 import org.jetbrains.annotations.Nullable;
 import teamwu.underworld.init.UWEntityInit;
 
-public class GragronEntity extends Animal {
+public class Gragron extends Animal {
 
-    public GragronEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+    public Gragron(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 

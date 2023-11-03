@@ -9,11 +9,10 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
 import teamwu.underworld.UnderWorldMod;
-import teamwu.underworld.entities.GragronEntity;
+import teamwu.underworld.entities.Gragron;
 
-public class GragronModel extends EntityModel<GragronEntity> {
+public class GragronModel extends EntityModel<Gragron> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(UnderWorldMod.MODID, "gragron"), "main");
 	private final ModelPart body;
@@ -65,7 +64,7 @@ public class GragronModel extends EntityModel<GragronEntity> {
 	}
 
 	@Override
-	public void setupAnim(GragronEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(Gragron entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
 	}
 
